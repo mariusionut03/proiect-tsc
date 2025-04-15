@@ -1,18 +1,6 @@
 # OpenBook e-book reader
 
-![](./Images/Pollution%20Tracker.png)
-
-### Project files
-
-- Hardware
-    - Schematic.sch
-    - Board.brd
-- Mechanical
-    - 3D file (.step)
-- Images
-    - images with device renders
-- LICENSE
-- README.md
+![](./Images/Model.png)
 
 ## BOM - Bill of Materials
 
@@ -58,17 +46,17 @@
 | LTSPICE_R 15                        | 1      |  | https://www.amazon.com/BOJACK-Values-Resistor-Resistors-Assortment/dp/B08FD1XVL6/ref=sr_1_1_sspa?sr=8-1-spons&sp_csd=d2lkZ2V0TmFtZT1zcF9hdGY |
 | Test Pad TP20R                      | 17     | https://us.misumi-ec.com/vona2/detail/221005496391/?HissuCode=TP20R-24 | https://us.misumi-ec.com/vona2/detail/221005496391/?HissuCode=TP20R-24 |
 
-### ESP32-C6
+## ESP32-C6
 
-- EN - RESET (activare device)
-- IO0 - INT_RTC (Intrerupere RTC)
-- IO1 - 32KHZ (Frecventa ceas)
-- IO2 - MISO (Master In Slave Out)
-- IO3 - EPD_BUSY (Stare free sau busy)
-- IO4 - SS_SD (activare card SD)
-- IO5 - EPD_DC (Data and Command Control)
+- EN - RESET (Activare sau dezactivare device)
+- IO0 - INT_RTC (Pin pentru intrerupere ale ceasului RTC sau Real Time Clock)
+- IO1 - 32KHZ (Ofera o frecventa de 32 kHz, utilizata pentru sincronizare.)
+- IO2 - MISO (Master In Slave Out, comunicare SPI pentru primire date de la periferice)
+- IO3 - EPD_BUSY (Indica starea ecranului: ocupat sau liber)
+- IO4 - SS_SD (Activeaza cardul SD, Slave Select)
+- IO5 - EPD_DC (Control pentru date si comenzi ecran)
 - IO6 - SCK (Serial Clock)
-- IO7 - MOSI (Master Out Slave In)
+- IO7 - MOSI (Master Out Slave In, comunicare SPI pentru trimitere date la periferice)
 - IO8 - GPIO8
 - IO9 - IO/BOOT (Schimbare state dispozitiv)
 - IO10 - EPD_CS (Select display)
@@ -85,3 +73,9 @@
 - IO22 - SCL (I2C Clock)
 - IO23 - EPD_RST (Reset display)
 - GND - Connected to ground 
+
+## Randari
+
+![](Images/OpenBook.png)
+![](Images/Screen.png)
+![](Images/OpenBook-Lid-Off.png)
